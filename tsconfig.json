@@ -7,5 +7,12 @@
     "paths": {
       "~/*": ["src/*"]
     }
-  }
+  },
+  "include": [
+    "./**/*"
+  ],
+  "exclude": [
+      "./plugins/**/*",
+      "./typings/**/*"
+  ]
 }
