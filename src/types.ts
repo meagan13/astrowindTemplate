@@ -7,6 +7,7 @@ export interface Post {
   description?: string;
 
   image?: string;
+  video?: string;
 
   canonical?: string | URL;
   permalink?: string;
