@@ -4,19 +4,27 @@ interface Item {
     text2: string;
 }
 
+interface Package {
+    image: string;
+    title: string;
+    description: string;
+}
+
 export interface Props {
     title?: string;
     items?: Array<Array<Item>>;
+    packages?: Array<Array<Package>>;
 }
 
 const {
     title = await Astro.slots.render('title'),
     items = [],
+    packages = [],
 } = Astro.props;
 ---
 
 <section class="scroll-mt-16 px-20" id="supercharge">
-    <div>
+    <div>        
         <div class="title text-center px-4 py-16 mx-auto max-w-6xl lg:px-8 lg:py-20">
             {title && (
                 <h2
@@ -26,7 +34,7 @@ const {
             )}
         </div>
 
-        <div class="text-blocks">
+        <div class="text-blocks mb-10">
             {
                 items.map((subitems) => (
                 <div class="flex">
@@ -45,8 +53,34 @@ const {
                 </div>
                 ))
             }
-
         </div>
+
+        <div class="package-blocks">
+            {
+                packages.map((subpackages) => (
+                <div class="flex">
+                    {subpackages.map(({ image, title, description }) => (
+                        <div class="mx-2">
+                            <div class="mb-10">
+                                <img src={ image }/>
+                            </div>
+                            
+                            <div>
+                                <h3 class="text-center text-2xl font-bold" set:html={ title }/>
+                                <p class="text-center py-2" set:html={ description } />
+                            </div>
+
+                            <div class="flex justify-center">
+                                <button class="my-8 px-8 py-2 bg-indigo-900 rounded text-white font-bold">PACKAGES</button>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+                ))
+            }
+        </div>
+
+
     </div>
 
 
