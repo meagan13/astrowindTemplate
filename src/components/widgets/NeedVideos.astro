@@ -23,7 +23,7 @@ const {
     <div class="">
         <div class="title text-center px-4 py-16 mx-auto max-w-6xl lg:px-8 lg:py-20">
             {
-                (title || subtitle && (
+                (title && (
                     <div class="mb-10 md:mx-auto text-center md:mb-12 max-w-3xl">
                     
                     {title && (
@@ -50,8 +50,8 @@ const {
                 <div class="flex flex-row max-w-md">
                     <div class="mb-4 mr-4"></div>
                     <div>
-                    <h3 class="mb-3 text-xl font-bold">{title}</h3>
-                    <p class="text-muted dark:text-slate-400" set:html={description} />
+                        <h3 class="mb-3 text-xl font-bold">{title}</h3>
+                        <p class="text-muted dark:text-slate-400" set:html={description} />
                     </div>
                 </div>
                 ))}

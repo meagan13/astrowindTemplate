@@ -13,6 +13,7 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import NeedVideos from '~/components/widgets/NeedVideos.astro';
+import Supercharge from '~/components/widgets/Supercharge.astro';
 
 const meta = {
   title: SITE.title,
@@ -42,7 +43,7 @@ const meta = {
 
   <!-- Note Widget ******************* -->
 
-  <Note />
+  <!-- <Note /> -->
 
 
   <!-- NeedVideos Widget -->
@@ -66,6 +67,24 @@ const meta = {
         },
       ]
     ]}
+  />
+
+  <!-- Supercharge Widget -->
+
+  <Supercharge
+      title="Supercharge Your Marketing With Video Content"
+      items={[
+        [
+          {
+            text1: "If you’re not advertising with video, you’re losing new business. Gig-speeds are rapidly making video a standard for online marketing and if it’s lacking in your ads, goodbye to your audience.",
+            text2: "That’s the last thing you want when people are trying to decide where to take their business. But producing a quality video is no small task. That’s where we come in. We have the smooth process you've been searching for."
+          },
+          {
+            text1: "Our team of experts will help you plan and create your marketing content that will help you reach your goals. That means we can help come up with social content ideas and then make them a reality.",
+            text2: "Whether you're looking for simple video editing, or more complex graphic animation, or sourcing local filming, our packages are here to simplify creating your content.",
+          },
+        ]
+      ]}
   />
 
   <!-- Features Widget *************** -->
