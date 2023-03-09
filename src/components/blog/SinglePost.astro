@@ -52,11 +52,11 @@ const { post, url } = Astro.props;
 
       {
         post.video ? (
--        <div class="relative overflow-hidden pt-[40%] mx-auto px-6 sm:px-6 max-w-3xl mt-8">
--          <iframe class="absolute top-0 bottom-0 left-0 right-0 w-full h-full" src={post.video}> </iframe>
--        </div>
--        ) : (
--          post.image ? (
+        <div class="relative overflow-hidden pt-[40%] mx-auto px-6 sm:px-6 max-w-3xl mt-8">
+          <iframe class="absolute top-0 bottom-0 left-0 right-0 w-full h-full" src={post.video}> </iframe>
+        </div>
+        ) : (
+         post.image ? (
           <Picture
             src={post.image}
             class="max-w-full lg:max-w-6xl mx-auto mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700"
