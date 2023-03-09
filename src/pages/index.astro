@@ -12,6 +12,7 @@ import LatestPosts from '~/components/blog/LatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import NeedVideos from '~/components/widgets/NeedVideos.astro';
 
 const meta = {
   title: SITE.title,
@@ -23,12 +24,11 @@ const meta = {
 <Layout {meta}>
   <!-- Hero Widget ******************* -->
 
-  <Hero></Hero>
-    <!--</Hero> <!--callToAction={{ text: 'Get template', href: 'https://github.com/onwidget/astrowind', icon: 'tabler:download' }} -->
-    <!-- callToAction2={{ text: 'Learn more', href: '#features' }} -->
-    <!-- image={{ src: import('~/assets/images/hero.png'), alt: 'AstroWind Hero Image' }} -->
-
-    <Fragment slot="title">
+  <Hero
+    callToAction2={{ text: '▶️ OUR WORK', href: '#features' }}
+  >
+    
+  <Fragment slot="title">
       Socialize Your Content 
     </Fragment>
 
@@ -37,16 +37,36 @@ const meta = {
         Professional help building your video and graphical content to market and grow your business with easy & flexible plans.
       </span>
     </Fragment>
-
-    <Hero>
-
-    </Hero>
-
-  <button>Test Button</button>
+    
+  </Hero>
 
   <!-- Note Widget ******************* -->
 
   <Note />
+
+
+  <!-- NeedVideos Widget -->
+
+  <NeedVideos
+    title="You Need Videos"
+    subtitle="A few statistics to consider"
+    items={[
+      [
+        {
+          title: '81%',
+          description: 'Effective businesses recognize that they have to keep up with trends. Now, 81% of business use video as a critical marketing tool.'
+        },
+        {
+          title: '95%',
+          description: 'You can simply communicate better with video. Studies show that viewers retain 95% of a message when watching a video verses 10% when reading text.'
+        },
+        {
+          title: '59%',
+          description: "Don't take our word for it. 59% of executives say they would rather watch a video than text when learning about a product or services."
+        },
+      ]
+    ]}
+  />
 
   <!-- Features Widget *************** -->
 
