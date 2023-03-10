@@ -1,0 +1,20 @@
+---
+import Item from '~/components/widgets/Card.astro';
+import type { Post } from '~/types';
+
+export interface Props {
+  posts: Array<Post>;
+}
+
+const { posts } = Astro.props;
+---
+
+  <ul class="grid md:grid-cols-2 gap-10">
+    {
+      posts.map((post) => (
+        <li class="mb-12 md:mb-20">
+          <Item post={post} />
+        </li>
+      ))
+    }
+  </ul>
