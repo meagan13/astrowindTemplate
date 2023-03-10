@@ -13,7 +13,7 @@ export async function getStaticPaths() {
   if (CASE_STUDY?.disabled || CASE_STUDY?.post?.disabled) return [];
   return (await fetchPosts()).map((post) => ({
     params: {
-      blog: post.permalink,
+      case_study: post.permalink,
     },
     props: { post },
   }));
@@ -33,6 +33,6 @@ const meta = {
 ---
 
 <Layout {meta}>
-  <SinglePost caseStudies={{ ...post, image: meta.image }} url={url} />
+  <SinglePost case_study={{ ...post, image: meta.image }} url={url} />
   <ToBlogLink />
 </Layout>

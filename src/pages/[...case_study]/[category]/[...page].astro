@@ -22,7 +22,7 @@ export async function getStaticPaths({ paginate }) {
     paginate(
       posts.filter((post) => typeof post.category === 'string' && category === post.category.toLowerCase()),
       {
-        params: { category: category, blog: CATEGORY_BASE || undefined },
+        params: { category: category, case_study: CATEGORY_BASE || undefined },
         pageSize: CASE_STUDY.postsPerPage,
         props: { category },
       }

@@ -12,7 +12,7 @@ import { CASE_BASE } from '~/utils/permalinks';
 export async function getStaticPaths({ paginate }) {
   if (CASE_STUDY?.disabled || CASE_STUDY?.list?.disabled) return [];
   return paginate(await fetchPosts(), {
-    params: { blog: CASE_BASE || undefined },
+    params: { case_study: CASE_BASE || undefined },
     pageSize: CASE_STUDY.postsPerPage,
   });
 }
