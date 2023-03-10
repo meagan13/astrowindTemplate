@@ -1,24 +1,15 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { getPermalink, getBlogPermalink, getCasePermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
   links: [
     {
+      text: 'Home',
+      href: getPermalink('/'),
+    },
+    {
       text: 'Case Studies',
-      href: getPermalink('/case-studies'),
-      // links: [
-      //   {
-      //     text: 'Sass',
-      //     href: getPermalink('/landing/saas'),
-      //   },
-      //   {
-      //     text: 'Startup',
-      //     href: getPermalink('/landing/startup'),
-      //   },
-      //   {
-      //     text: 'Mobile App',
-      //     href: getPermalink('/landing/mobile-app'),
-      //   },
-      // ],
+      href: getCasePermalink('/case-studies'),
+    
     },
     {
       text: 'Packages',
@@ -32,27 +23,11 @@ export const headerData = {
       //     text: 'Pricing',
       //     href: '#',
       //   },
-      //   {
-      //     text: 'About us',
-      //     href: '#',
-      //   },
-      //   {
-      //     text: 'Contact',
-      //     href: '#',
-      //   },
-      //   {
-      //     text: 'Terms',
-      //     href: getPermalink('/terms'),
-      //   },
-      //   {
-      //     text: 'Privacy policy',
-      //     href: getPermalink('/privacy'),
-      //   },
       // ],
     },
     {
       text: 'Team',
-      href: getPermalink('/team'),
+      href: getPermalink('/about/team'),
     },
     {
       text: 'Courses',

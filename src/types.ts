@@ -37,3 +37,10 @@ export interface MetaSEO {
   ogTitle?: string;
   ogType?: string;
 }
+
+export interface Card {
+  url?: string, 
+  img: string, 
+  title: string, 
+  contents?: string,
+}

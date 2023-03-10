@@ -20,5 +20,6 @@ const post = defineCollection({
 });
 
 export const collections = {
-  post: post,
+  'post': post,
+  'case-study': post,
 };
