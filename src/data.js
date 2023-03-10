@@ -1,24 +1,11 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { getPermalink, getBlogPermalink, getCasePermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
   links: [
     {
       text: 'Case Studies',
-      href: getPermalink('/case-studies'),
-      // links: [
-      //   {
-      //     text: 'Sass',
-      //     href: getPermalink('/landing/saas'),
-      //   },
-      //   {
-      //     text: 'Startup',
-      //     href: getPermalink('/landing/startup'),
-      //   },
-      //   {
-      //     text: 'Mobile App',
-      //     href: getPermalink('/landing/mobile-app'),
-      //   },
-      // ],
+      href: getCasePermalink('/case-studies'),
+    
     },
     {
       text: 'Packages',

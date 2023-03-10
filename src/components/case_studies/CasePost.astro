@@ -86,7 +86,7 @@ const { caseStudies, url } = Astro.props;
         caseStudies.Content ? (
           <>
             {/* @ts-ignore */}
-            <post.Content />
+            <case-study.Content />
           </>
         ) : (
           <Fragment set:html={caseStudies.content} />

@@ -55,8 +55,38 @@ const CONFIG = {
       disabled: false,
     },
   },
+
+  case_study: {
+    disabled: false,
+    postsPerPage: 4,
+
+    post: {
+      permalink: '/%slug%', // Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
+      noindex: false,
+      disabled: false,
+    },
+
+    list: {
+      pathname: 'case-studies', // Blog main path, you can change this to "articles" (/articles)
+      noindex: false,
+      disabled: false,
+    },
+
+    category: {
+      pathname: 'category', // Category main path /category/some-category
+      noindex: true,
+      disabled: false,
+    },
+
+    tag: {
+      pathname: 'tag', // Tag main path /tag/some-tag
+      noindex: true,
+      disabled: false,
+    },
+  },
 };
 
-export const SITE = { ...CONFIG, blog: undefined };
+export const SITE = { ...CONFIG, blog: undefined, case_study: undefined };
 export const BLOG = CONFIG.blog;
+export const CASE_STUDY = CONFIG.case_study;
 export const DATE_FORMATTER = CONFIG.dateFormatter;
