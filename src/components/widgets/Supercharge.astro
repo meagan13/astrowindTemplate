@@ -6,6 +6,7 @@ interface Item {
 
 interface Package {
     image: string;
+    alt: string;
     title: string;
     description: string;
 }
@@ -59,10 +60,10 @@ const {
             {
                 packages.map((subpackages) => (
                 <div class="flex">
-                    {subpackages.map(({ image, title, description }) => (
+                    {subpackages.map(({ image, alt, title, description }) => (
                         <div class="mx-2">
                             <div class="mb-10">
-                                <img src={ image }/>
+                                <img src={ image } alt={ alt }/>
                             </div>
                             
                             <div>
