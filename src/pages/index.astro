@@ -15,6 +15,7 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import NeedVideos from '~/components/widgets/NeedVideos.astro';
 import Supercharge from '~/components/widgets/Supercharge.astro';
 import QualityVidGraphics from '~/components/widgets/QualityVidGraphics.astro'
+import Testimonials from '~/components/widgets/Testimonials.astro'
 
 const meta = {
   title: SITE.title,
@@ -140,6 +141,37 @@ const meta = {
     ]}        
   />
 
+  <!-- Testimonials Widget -->
+
+  <Testimonials
+    highlight="TESTIMONIALS"
+    title="What Our Clients Are Saying"
+    items={[
+      [
+        {
+          photo: "../src/assets/images/headshot.jpg",
+          alt: "Man wearing glasses",
+          quote: "The bottom line: I make more money. Simply said! Working with Jeff and his team, I'm hitting all-time revenue numbers.",
+          name: "Tom Stone",
+          role: "MORTGAGE CONSULTANT",
+        },
+        {
+          photo: "../src/assets/images/headshot.jpg",
+          alt: "Man wearing glasses",
+          quote: "We've used Socialize for regular video creation for the last two years. They're easy to work with and create high quality videos!",
+          name: "Colin Kelly",
+          role: "CLEAR FOUNDATION",
+        },
+        {
+          photo: "../src/assets/images/headshot.jpg",
+          alt: "Man wearing glasses",
+          quote: "They were really great with coming up with different ideas and unique scripts. I was really happy with the creativity and the end results.",
+          name: "Dana Ball",
+          role: "DANA BALL LEGAL SERVICES",
+        },
+      ]
+    ]}
+  />
   <!-- Features Widget *************** -->
 
   <Features
