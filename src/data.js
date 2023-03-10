@@ -3,6 +3,10 @@ import { getPermalink, getBlogPermalink, getCasePermalink, getAsset } from './ut
 export const headerData = {
   links: [
     {
+      text: 'Home',
+      href: getPermalink('/'),
+    },
+    {
       text: 'Case Studies',
       href: getCasePermalink('/case-studies'),
     
@@ -18,22 +22,6 @@ export const headerData = {
       //   {
       //     text: 'Pricing',
       //     href: '#',
-      //   },
-      //   {
-      //     text: 'About us',
-      //     href: '#',
-      //   },
-      //   {
-      //     text: 'Contact',
-      //     href: '#',
-      //   },
-      //   {
-      //     text: 'Terms',
-      //     href: getPermalink('/terms'),
-      //   },
-      //   {
-      //     text: 'Privacy policy',
-      //     href: getPermalink('/privacy'),
       //   },
       // ],
     },
