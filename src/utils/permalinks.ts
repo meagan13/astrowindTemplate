@@ -1,6 +1,6 @@
 import slugify from 'limax';
 
-import { SITE, BLOG } from '~/config.mjs';
+import { SITE, BLOG, CASE_STUDY } from '~/config.mjs';
 import { trim } from '~/utils/utils';
 
 export const trimSlash = (s: string) => trim(trim(s, '/'));
@@ -25,6 +25,7 @@ export const POST_PERMALINK_PATTERN = trimSlash(BLOG?.post?.permalink || '/%slug
 export const BLOG_BASE = cleanSlug(BLOG?.list?.pathname);
 export const CATEGORY_BASE = cleanSlug(BLOG?.category?.pathname || 'category');
 export const TAG_BASE = cleanSlug(BLOG?.tag?.pathname) || 'tag';
+export const CASE_BASE = cleanSlug(CASE_STUDY?.list?.pathname);
 
 /** */
 export const getCanonical = (path = ''): string | URL => new URL(path, SITE.origin);
@@ -60,6 +61,9 @@ export const getHomePermalink = (): string => getPermalink('/');
 
 /** */
 export const getBlogPermalink = (): string => getPermalink(BLOG_BASE);
+
+/** */
+export const getCasePermalink = (): string => getPermalink(CASE_BASE);
 
 /** */
 export const getAsset = (path: string): string =>
