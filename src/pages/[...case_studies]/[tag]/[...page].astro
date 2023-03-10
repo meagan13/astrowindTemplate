@@ -1,16 +1,16 @@
 ---
-import { SITE, BLOG } from '~/config.mjs';
+import { SITE, CASE_STUDY } from '~/config.mjs';
 
 import Layout from '~/layouts/PageLayout.astro';
 import BlogList from '~/components/blog/List.astro';
 import Pagination from '~/components/blog/Pagination.astro';
 
-import { fetchPosts } from '~/utils/blog';
+import { fetchPosts } from '~/utils/casestudies';
 import { TAG_BASE } from '~/utils/permalinks';
 import Headline from '~/components/blog/Headline.astro';
 
 export async function getStaticPaths({ paginate }) {
-  if (BLOG?.disabled || BLOG?.tag?.disabled) return [];
+  if (CASE_STUDY?.disabled || CASE_STUDY?.tag?.disabled) return [];
 
   const posts = await fetchPosts();
   const tags = new Set();
@@ -23,7 +23,7 @@ export async function getStaticPaths({ paginate }) {
       posts.filter((post) => Array.isArray(post.tags) && post.tags.find((elem) => elem.toLowerCase() === tag)),
       {
         params: { tag: tag, blog: TAG_BASE || undefined },
-        pageSize: BLOG.postsPerPage,
+        pageSize: CASE_STUDY.postsPerPage,
         props: { tag },
       }
     )
@@ -36,7 +36,7 @@ const currentPage = page.currentPage ?? 1;
 const meta = {
   title: `Posts by tag '${tag}'${currentPage > 1 ? ` — Page ${currentPage} ` : ''}`,
   description: SITE.description,
-  noindex: BLOG?.tag?.noindex,
+  noindex: CASE_STUDY?.tag?.noindex,
 };
 ---
 

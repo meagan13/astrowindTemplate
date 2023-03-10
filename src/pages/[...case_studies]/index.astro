@@ -1,16 +1,16 @@
 ---
-import { BLOG } from '~/config.mjs';
+import { CASE_STUDY } from '~/config.mjs';
 
 import Layout from '~/layouts/PageLayout.astro';
 import SinglePost from '~/components/case_studies/CasePost.astro';
 import ToBlogLink from '~/components/blog/ToBlogLink.astro';
 
 import { getCanonical, getPermalink } from '~/utils/permalinks';
-import { fetchPosts } from '~/utils/blog';
+import { fetchPosts } from '~/utils/casestudies';
 import { findImage } from '~/utils/images';
 
 export async function getStaticPaths() {
-  if (BLOG?.disabled || BLOG?.post?.disabled) return [];
+  if (CASE_STUDY?.disabled || CASE_STUDY?.post?.disabled) return [];
   return (await fetchPosts()).map((post) => ({
     params: {
       blog: post.permalink,
@@ -27,7 +27,7 @@ const meta = {
   description: post.description,
   canonical: post.canonical || url,
   image: await findImage(post.image),
-  noindex: BLOG?.post?.noindex,
+  noindex: CASE_STUDY?.post?.noindex,
   ogType: 'article',
 };
 ---
