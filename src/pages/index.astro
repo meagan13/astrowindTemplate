@@ -15,7 +15,8 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import NeedVideos from '~/components/widgets/NeedVideos.astro';
 import Supercharge from '~/components/widgets/Supercharge.astro';
 import QualityVidGraphics from '~/components/widgets/QualityVidGraphics.astro'
-import Testimonials from '~/components/widgets/Testimonials.astro'
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import CaseStudies from '~/components/widgets/CaseStudies.astro';
 
 const meta = {
   title: SITE.title,
@@ -172,6 +173,75 @@ const meta = {
       ]
     ]}
   />
+
+  <!-- CaseStudies Widget -->
+
+  <CaseStudies 
+    highlight="POST LIST"
+    title="Case Studies"
+    items={[
+      [
+        {
+          img:'../src/assets/images/camera.jpg',
+          alt: 'Video camera',
+          tags: [
+            [
+              {
+                text: 'Case Studies',
+                link: '/case-studies',
+              },
+              {
+                text: 'Social Media Marketing',
+                link: '/social-media-marketing',
+              },
+            ]
+          ],
+          blogTitle='How to Create Effective Social Media Ads: Tips from Socialize',
+          description="Add however many of the first characters that we want to include"
+        },
+        {
+          img:'../src/assets/images/camera.jpg',
+          alt: 'video camera',
+          tags: [
+            [
+              {
+                text: 'Case Studies',
+                link: '/case-studies',
+              },
+              {
+                text: 'Business',
+                link: '/business',
+              },
+              {
+                text: 'Branding',
+                link: '/branding',
+              },
+            ]
+          ],
+          blogTitle: 'Dropping Your Ad Spend With The Right Creative',
+          description: 'Add some characters here pulled from the blog post'
+        },
+        {
+          img:'../src/assets/images/camera.jpg',
+          alt: 'video camera',
+          tags: [
+            [
+              {
+                text: 'Case Studies',
+                link: '/case-studies',
+              },
+
+            ]
+          ],
+          blogTitle: 'What You Can Get With Half-day Filming: Habitat for Humanity Case Study',
+          description: 'Add the characters here from the blog post itself'
+        },
+      ]
+    ]}
+
+
+  />
+
   <!-- Features Widget *************** -->
 
   <Features
