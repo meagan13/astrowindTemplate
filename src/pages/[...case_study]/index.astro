@@ -3,7 +3,7 @@ import { CASE_STUDY } from '~/config.mjs';
 
 import Layout from '~/layouts/PageLayout.astro';
 import SinglePost from '~/components/case_studies/CasePost.astro';
-import ToBlogLink from '~/components/blog/ToBlogLink.astro';
+import ToCaseStudyLink from '~/components/case_studies/ToCaseStudyLink.astro';
 
 import { getCanonical, getPermalink } from '~/utils/permalinks';
 import { fetchPosts } from '~/utils/casestudies';
@@ -34,5 +34,5 @@ const meta = {
 
 <Layout {meta}>
   <SinglePost case_study={{ ...post, image: meta.image }} url={url} />
-  <ToBlogLink />
+  <ToCaseStudyLink />
 </Layout>
