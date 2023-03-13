@@ -27,7 +27,7 @@ export const headerData = {
     },
     {
       text: 'Team',
-      href: getPermalink('/about/team'),
+      href: getPermalink('/team'),
     },
     {
       text: 'Courses',
