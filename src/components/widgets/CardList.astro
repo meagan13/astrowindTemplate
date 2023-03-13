@@ -5,12 +5,12 @@ import type { Card } from '~/types';
 const { cards } = Astro.props;
 ---
 
-  <ul class="grid md:grid-cols-4 gap-10">
+<div class="flex md:grid-cols-4 gap-10 bg-green-200">
     {
       cards.map((card) => (
-        <li class="mb-12 md:mb-10">
+      <div class="bg-red-300 relative rounded-lg border border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-900 transition-all duration-300">
           <Item card={card}/>
-        </li>
+      </div>
       ))
     }
-  </ul>
+</div>

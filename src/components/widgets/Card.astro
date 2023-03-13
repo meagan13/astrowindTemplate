@@ -4,7 +4,6 @@ import { Picture } from '@astrojs/image/components';
 
 const { card } = Astro.props;
 
-const alt = 'An avatar for' + '${card.data.name}';
 ---
 
 <div class="flex-col border-2 border-black rounded-lg">
@@ -22,7 +21,7 @@ const alt = 'An avatar for' + '${card.data.name}';
       decoding="async"
     />
   </div>
-  <div class="flex-auto">
+  <div class="flex-auto bg-purple-900">
     <!-- class="card__content" -->
     <h3 class="flex justify-center">
       {card.data.name}
