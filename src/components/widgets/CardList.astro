@@ -1,19 +1,19 @@
 ---
 import Item from '~/components/widgets/Card.astro';
-import type { Post } from '~/types';
+import type { Card } from '~/types';
 
 export interface Props {
-  posts: Array<Post>;
+  cards: Array<Card>;
 }
 
-const { posts } = Astro.props;
+const { cards } = Astro.props;
 ---
 
   <ul class="grid md:grid-cols-2 gap-10">
     {
-      posts.map((post) => (
+      cards.map((card) => (
         <li class="mb-12 md:mb-20">
-          <Item post={post} />
+          <Item card={card}/>
         </li>
       ))
     }
