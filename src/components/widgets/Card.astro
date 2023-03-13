@@ -4,35 +4,46 @@ import { Picture } from '@astrojs/image/components';
 
 const { card } = Astro.props;
 
+const src = `{card.data.image}` ||  '../src/assets/images/doctor-10.svg'
 ---
 
-<div class="flex-col border-2 border-black rounded-lg">
+<div class="flex w-80 md:w-full flex-col rounded-lg">
   <div
-    class="relative h-0 pb-[56.25%] md:pb-[75%] md:h-72 lg:pb-[56.25%] overflow-hidden bg-gray-400 dark:bg-slate-700 rounded shadow-lg"
+    class="relative w-full h-40 rounded-lg bg-muted-200 dark:bg-muted-800 pb-4 bg-ns_green"
   >
-    <Picture
+    {(card.data.image) && (<Picture
       src={card.data.image}
-      class="absolute inset-0 object-cover w-full h-full mb-6 rounded shadow-lg bg-gray-400 dark:bg-slate-700"
+      class="absolute bottom-0 inset-x-0 mx-auto w-full max-w-[170px] ptablet:max-w-[150px]"
       widths={[400, 900]}
       sizes="(max-width: 900px) 400px, 900px"
       alt={`An avatar for ${card.data.name}`}
-      aspectRatio="16:9"
+      aspectRatio="3:4"
       loading="lazy"
       decoding="async"
-    />
+    />)} 
+    {(card.data.image == undefined) && (<Picture
+      src='../src/assets/images/doctor-10.svg'
+      class="absolute bottom-0 inset-x-0 mx-auto w-full max-w-[170px] ptablet:max-w-[150px]"
+      widths={[400, 900]}
+      sizes="(max-width: 900px) 400px, 900px"
+      alt={`An avatar for ${card.data.name}`}
+      aspectRatio="3:4"
+      loading="lazy"
+      decoding="async"
+    />)} 
   </div>
-  <div class="flex-auto bg-purple-900">
+  <div class="flex-auto">
     <!-- class="card__content" -->
-    <h3 class="flex justify-center">
+    <h3 class="text-center font-bold text-xl">
       {card.data.name}
     </h3>
-    <h5 class="flex justify-center">
+    <h5 class="text-center">
       {card.data.title}
     </h5>
-    <p class="flex justify-center">
+    <p class="text-center">
       {card.data.description}
     </p>
-    <p class="flex justify-center">
+    <p class="text-center italic text-sm pb-4 px-4">
       {card.data.quote}
     </p>
   </div>
