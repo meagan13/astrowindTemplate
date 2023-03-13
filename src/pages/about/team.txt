@@ -3,19 +3,31 @@ import { SITE } from '~/config.mjs';
 import Layout from '~/layouts/PageLayout.astro';
 
 import Features2 from '~/components/widgets/Features2.astro';
-import Card from '~/components/widgets/Card.astro';
+import CardList from '~/components/widgets/CardList.astro';
+
+export async function getStaticPaths({ paginate }) {
+  const cards = await Astro.glob('././content/team/*.md');
+
+  return paginate(cards);
+}
+
+interface Props {
+  page: FrontmatterPage;
+}
 
 const meta = {
   title: SITE.title,
   description: SITE.description,
   dontUseTitleTemplate: true,
 };
+
+const {page} = Astro.props;
 ---
 
 <Layout {meta}>
   <!-- Features2 Widget ************** -->
   <div>
-    <Card />
+    <CardList cards={page.data} /> 
   </div>
   <Features2
     title="Most used widgets"
