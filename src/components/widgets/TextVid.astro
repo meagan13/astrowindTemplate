@@ -1,0 +1,51 @@
+---
+export interface Props {
+    title?: string;
+    description1?: string;
+    description2?: string;
+    video?: string;
+    vidtype?: string;
+}
+
+const {
+    title = await Astro.slots.render('title'),
+    description1 = await Astro.slots.render('description1'),
+    description2 = await Astro.slots.render('description2'),
+    video = await Astro.slots.render('video'),
+    vidtype = await Astro.slots.render('vidtype')
+} = Astro.props;
+---
+
+<section class="scroll-mt-16 px-20" id="needvideos">
+    <div class="flex">
+        <div class="title text-center px-4 py-16 mx-auto max-w-6xl lg:px-8 lg:py-20">
+            {
+                (title && (
+                    <div class="mb-10 md:mx-auto text-center md:mb-12 max-w-3xl">
+                    
+                    {title && (
+                        <h2
+                        class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading"
+                        set:html={title}
+                        />
+                    )}
+
+                    {description1 && (
+                        <p class="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400" set:html={description1} />
+                        <br />
+                        <p class="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400" set:html={description2} />
+                        )}
+                    </div>
+                    )
+                )
+            }
+        </div>
+            <video width="320" height="240" controls>
+                <source src={ video } type={ vidtype }>
+                Your browser does not support the video tag.
+            </video>
+        <div>
+
+        </div>
+    </div>
+</section>
