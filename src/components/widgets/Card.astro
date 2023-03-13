@@ -1,23 +1,24 @@
 ---
-import type { Card } from '~/types';
-
-export interface Props {
-    card: Card;
-}
+// import type { Card } from '~/types';
 
 const { card } = Astro.props;
 ---
 
 <div class="flex-col border-2 border-black rounded-lg">
   <div class="h-40">
-    <img src={card.img}>
+    <img src={card.img} alt={card.alt}>
   </div>
-  <div class="card__content">
+  <div>
+    <!-- class="card__content" -->
     <h3>
-      <a href={card.url}>{card.title}</a>
+      {card.name}
     </h3>
-    <p>
-      {card.contents}
+    <h5>
+      {card.title}
+      </h5>    
+      <p>
+      {card.description}
+      {card.quote}
     </p>
   </div>
 </div>
