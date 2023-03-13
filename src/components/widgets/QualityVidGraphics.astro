@@ -1,0 +1,81 @@
+---
+import { Icon } from 'astro-icon';
+
+interface Item {
+    icon: string;
+    alt: string;
+    subtitle: string;
+    tag: string;
+}
+
+export interface Props {
+    title?: string;
+    description1?: string;
+    description2?: string;
+    items: Array<Array<Item>>;
+}
+
+const {
+    title = await Astro.slots.render('title'),
+    description1 = await Astro.slots.render('description1'),
+    description2 = await Astro.slots.render('description2'),
+    items = [],
+} = Astro.props;
+---
+
+<section class="scroll-mt-16 px-20" id="qualityvidgraphics">
+    <div class="lg:py-20 px-4 mx-auto max-w-6xl lg:px-8">
+        <div class="text-left">
+            {
+                (title && (
+                    <div class="w-1/2 mb-10 text-left md:mb-12 max-w-3xl">
+                    
+                    {title && (
+                        <h2
+                        class="text-4xl md:text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading"
+                        set:html={title}
+                        />
+                    )}
+
+                    {description1 && (
+                        <p class="max-w-3xl mx-auto text-left text-muted dark:text-slate-400" set:html={ description1 } />
+                    )}
+
+                    <br />
+
+                    {description2 && (
+                        <p class="max-w-3xl mx-auto text-left text-muted dark:text-slate-400" set:html={ description2 } />
+                    )}
+                    </div>
+                    )
+                )
+            }
+        </div>
+
+        <div class="circle-icons-div">
+            {
+                items.map((subitems) => (
+                <div class="flex">
+                    {subitems.map(({ icon, alt, subtitle, tag }) => (
+                    <div class="flex flex-row max-w-md w-1/4">
+                        <div class="flex flex-col my-4 mr-4">
+                            <div class="icon-div flex justify-center">
+                                <img src={ icon } alt={ alt } class="block bg-green-100 rounded-full my-2 p-10"/>
+                            </div>
+                            
+                            <div class="text-div flex justify-start flex-col">
+                                <p class="mb-3 font-bold text-center text-sm" set:html={ subtitle } />
+                                <p class="text-center text-muted dark:text-slate-400" set:html={ tag } />
+                            </div>
+                            
+                        </div>
+                    </div>
+                    ))}
+                </div>
+                ))
+            }
+        </div>
+
+    </div>
+
+</section>

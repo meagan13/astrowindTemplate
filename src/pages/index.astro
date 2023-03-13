@@ -14,6 +14,9 @@ import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import NeedVideos from '~/components/widgets/NeedVideos.astro';
 import Supercharge from '~/components/widgets/Supercharge.astro';
+import QualityVidGraphics from '~/components/widgets/QualityVidGraphics.astro'
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import CaseStudies from '~/components/widgets/CaseStudies.astro';
 
 const meta = {
   title: SITE.title,
@@ -89,16 +92,19 @@ const meta = {
         [
           {
             image: "../src/assets/images/robot.jpg",
+            alt: "robot",
             title: "Filming",
             description: "Filming local in your area with experienced professionals or guide you in doing the filming yourself.",
           },
           {
             image: "../src/assets/images/robot.jpg",
+            alt: "robot",
             title: "Video Editing",
             description: "Our team of video edits have the knowledge to create your video content quickly.",
           },
           {
             image: "../src/assets/images/robot.jpg",
+            alt: "robot",
             title: "Animation",
             description: "Adding quality motion graphics or doing a full animated project will raise the quality level of your content.",
           }
@@ -106,9 +112,136 @@ const meta = {
       ]}
   />
 
+  <!-- QualityVidGraphics Widget -->
+
+  <QualityVidGraphics
+    title="More Quality Marketing Videos & Graphics"
+    description1="Clients that work with us find they are more easily creating marketing content more consistently. We help them navigate through complex video production, 2D animation, and everything in-between."
+    description2="By using our process you'll not only have a good experience but not spend all your marketing money on producing high-quality videos."
+    items={[
+      [
+        {
+          icon: "../src/assets/images/play.png",
+          alt: "play icon",
+          subtitle: "NO Long-Term Contracts",
+          tag: "Flexible and easy packages to fit your timeline and need.",
+        },
+        {
+          icon: "../src/assets/images/play.png",
+          alt: "play icon",
+          subtitle: "Custom",
+          tag: "Everything is created for you according to your brand.",
+        },
+        {
+          icon: "../src/assets/images/play.png",
+          alt: "play icon",
+          subtitle: "Localized",
+          tag: "Filming will be in your local area or wherever you need.",
+        },
+      ]
+    ]}        
+  />
+
+  <!-- Testimonials Widget -->
+
+  <Testimonials
+    highlight="TESTIMONIALS"
+    title="What Our Clients Are Saying"
+    items={[
+      [
+        {
+          photo: "../src/assets/images/headshot.jpg",
+          alt: "Man wearing glasses",
+          quote: "The bottom line: I make more money. Simply said! Working with Jeff and his team, I'm hitting all-time revenue numbers.",
+          name: "Tom Stone",
+          role: "MORTGAGE CONSULTANT",
+        },
+        {
+          photo: "../src/assets/images/headshot.jpg",
+          alt: "Man wearing glasses",
+          quote: "We've used Socialize for regular video creation for the last two years. They're easy to work with and create high quality videos!",
+          name: "Colin Kelly",
+          role: "CLEAR FOUNDATION",
+        },
+        {
+          photo: "../src/assets/images/headshot.jpg",
+          alt: "Man wearing glasses",
+          quote: "They were really great with coming up with different ideas and unique scripts. I was really happy with the creativity and the end results.",
+          name: "Dana Ball",
+          role: "DANA BALL LEGAL SERVICES",
+        },
+      ]
+    ]}
+  />
+
+  <!-- CaseStudies Widget -->
+
+  <!-- <CaseStudies 
+    highlight="POST LIST"
+    title="Case Studies"
+    items={[
+      [
+        {
+          img:'../src/assets/images/camera.jpg',
+          alt: 'Video camera',
+          tags: [
+            [
+              {
+                text: 'Case Studies',
+                link: '/case-studies',
+              },
+              {
+                text: 'Social Media Marketing',
+                link: '/social-media-marketing',
+              },
+            ]
+          ],
+          blogTitle='How to Create Effective Social Media Ads: Tips from Socialize',
+          description="Add however many of the first characters that we want to include",
+        },
+        {
+          img:'../src/assets/images/camera.jpg',
+          alt: 'video camera',
+          tags: [
+            [
+              {
+                text: 'Case Studies',
+                link: '/case-studies',
+              },
+              {
+                text: 'Business',
+                link: '/business',
+              },
+              {
+                text: 'Branding',
+                link: '/branding',
+              },
+            ]
+          ],
+          blogTitle: 'Dropping Your Ad Spend With The Right Creative',
+          description: 'Add some characters here pulled from the blog post',
+        },
+        {
+          img:'../src/assets/images/camera.jpg',
+          alt: 'video camera',
+          tags: [
+            [
+              {
+                text: 'Case Studies',
+                link: '/case-studies',
+              },
+            ]
+          ],
+          blogTitle: 'What You Can Get With Half-day Filming: Habitat for Humanity Case Study',
+          description: 'Add the characters here from the blog post itself',
+        },
+      ]
+    ]}
+  /> -->
+
   <!-- Features Widget *************** -->
 
-  <Features
+  <!-- <Features
     highlight="Features"
     title="What you get with AstroWind"
     subtitle="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae."
@@ -158,7 +291,7 @@ const meta = {
 
   <!-- Content Widget **************** -->
 
-  <Content
+  <!-- <Content
     highlight="Inside template"
     title="And what's inside? ..."
     items={[
@@ -188,11 +321,11 @@ const meta = {
       Ne dicta praesent ocurreret has, diam theophrastus at pro. Eos etiam regione ut, persius eripuit quo id. Sit te euismod
       tacimates.
     </Fragment>
-  </Content>
+  </Content> -->
 
   <!-- Content Widget **************** -->
 
-  <Content
+  <!-- <Content
     isReversed
     isAfterContent
     items={[
@@ -219,11 +352,11 @@ const meta = {
       src: import('~/assets/images/vintage.jpg'),
       alt: 'Vintage Image',
     }}
-  />
+  /> -->
 
   <!-- Steps Widget ****************** -->
 
-  <Steps
+  <!-- <Steps
     title="Get your dream website up and running in no time with AstroWind."
     items={[
       {
@@ -253,11 +386,11 @@ const meta = {
       src: import('~/assets/images/creativity.jpg'),
       alt: 'Steps image',
     }}
-  />
+  /> -->
 
   <!-- Features2 Widget ************** -->
 
-  <Features2
+  <!-- <Features2
     title="Most used widgets"
     subtitle="Provides frequently used components for building websites using Tailwind CSS"
     highlight="Components"
@@ -317,7 +450,7 @@ const meta = {
         icon: 'icon-park:page-template',
       },
     ]}
-  />
+  /> -->
 
   <!-- HighlightedPosts Widget ******* -->
 
@@ -337,7 +470,7 @@ const meta = {
 
   <!-- FAQs Widget ******************* -->
 
-  <FAQs
+  <!-- <FAQs
     title="Frequently Asked Questions"
     subtitle="Duis turpis dui, fringilla mattis sem nec, fringilla euismod neque. Morbi tincidunt lacus nec tortor scelerisque pulvinar."
     highlight="FAQs"
@@ -377,22 +510,22 @@ const meta = {
         },
       ],
     ]}
-  />
+  /> -->
 
   <!-- Stats Widget ****************** -->
 
-  <Stats
+  <!-- <Stats
     items={[
       { name: 'Downloads', value: '132K' },
       { name: 'Stars', value: '24.8K' },
       { name: 'Forks', value: '10.3K' },
       { name: 'Users', value: '48.4K' },
     ]}
-  />
+  /> -->
 
   <!-- CallToAction Widget *********** -->
 
-  <CallToAction
+  <!-- <CallToAction
     callToAction={{
       text: 'Get template',
       href: 'https://github.com/onwidget/astrowind',
@@ -407,5 +540,5 @@ const meta = {
       Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
       waste more time! :P
     </Fragment>
-  </CallToAction>
+  </CallToAction> -->
 </Layout>
