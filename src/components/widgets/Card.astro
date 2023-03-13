@@ -1,24 +1,40 @@
 ---
 // import type { Card } from '~/types';
+import { Picture } from '@astrojs/image/components';
 
 const { card } = Astro.props;
+
+const alt = 'An avatar for' + '${card.data.name}';
 ---
 
 <div class="flex-col border-2 border-black rounded-lg">
-  <div class="h-40">
-    <img src={card.img} alt={card.alt}>
+  <div
+    class="relative h-0 pb-[56.25%] md:pb-[75%] md:h-72 lg:pb-[56.25%] overflow-hidden bg-gray-400 dark:bg-slate-700 rounded shadow-lg"
+  >
+    <Picture
+      src={card.data.image}
+      class="absolute inset-0 object-cover w-full h-full mb-6 rounded shadow-lg bg-gray-400 dark:bg-slate-700"
+      widths={[400, 900]}
+      sizes="(max-width: 900px) 400px, 900px"
+      alt={`An avatar for ${card.data.name}`}
+      aspectRatio="16:9"
+      loading="lazy"
+      decoding="async"
+    />
   </div>
-  <div>
+  <div class="flex-auto">
     <!-- class="card__content" -->
-    <h3>
-      {card.name}
+    <h3 class="flex justify-center">
+      {card.data.name}
     </h3>
-    <h5>
-      {card.title}
-      </h5>    
-      <p>
-      {card.description}
-      {card.quote}
+    <h5 class="flex justify-center">
+      {card.data.title}
+    </h5>
+    <p class="flex justify-center">
+      {card.data.description}
+    </p>
+    <p class="flex justify-center">
+      {card.data.quote}
     </p>
   </div>
 </div>
