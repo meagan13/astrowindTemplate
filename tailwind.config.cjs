@@ -19,6 +19,13 @@ module.exports = {
       },
       backgroundImage: {
         'home-bg': "url('/src/assets/images/video_test.gif')",
+      },
+      maxWidth: {
+        '1/2': '50%',
+        '1/4': '25%',
+        '3/4': '75%',
+        '1/3': '33.333333%',
+        '2/3': '66.666667%',
       }
     },
   },

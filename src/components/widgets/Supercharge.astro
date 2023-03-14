@@ -38,31 +38,33 @@ const { title = await Astro.slots.render('title'), items = [], packages = [] } =
       }
     </div>
 
-    <div class="text-blocks mb-10">
+    <div class="flex flex-wrap mb-10">
       {
         items.map((subitems) => (
-          <div class="flex">
+          <div class="flex flex-wrap md:flex-nowrap">
+            <div class="grid md:grid-cols-2">
             {subitems.map(({ text1, text2 }) => (
-              <div class="">
-                <div class="m-5">
+                <div class="m-4">
                   <p class="text-muted dark:text-slate-400" set:html={text1} />
-                  <br />
+                </div>
+                <div class="m-4">
                   <p class="text-muted dark:text-slate-400" set:html={text2} />
                 </div>
-              </div>
+              
             ))}
-            <div />
-          </div>
+            </div>         
+            </div>
+          
         ))
       }
     </div>
 
-    <div class="package-blocks flex flex-wrap">
+    <div class="package-blocks flex flex-wrap justify-center">
       <div class="flex flex-row flex-wrap justify-center">
         {
           packageList.map((packages) => (
-            <div class="flex w-72 flex-col  m-1 border border-slate-700 dark:border-slate-500 md:h-[42rem] h-fit justify-center">
-              <div class="flex relative h-[24rem]">
+            <div class="flex md:w-72 flex-col  m-1 border border-slate-700 dark:border-slate-500 md:h-[42rem] h-fit justify-center">
+              <div class="flex relative h-[16rem] md:h-[24rem]">
                 <div class="mb-4 absolute top-0">
                   <img src="../src/assets/images/texture-header.jpg" />
                 </div>
