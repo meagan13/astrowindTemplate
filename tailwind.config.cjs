@@ -15,6 +15,10 @@ module.exports = {
         serif: ['var(--aw-font-serif)', ...defaultTheme.fontFamily.serif],
         heading: ['var(--aw-font-heading)', ...defaultTheme.fontFamily.sans],
       },
+      backgroundImage: {
+        'pplComputer': "url('/src/assets/images/peopleComputer.jpg')",
+      },
+
     },
   },
   plugins: [require('@tailwindcss/typography')],

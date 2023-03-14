@@ -1,0 +1,31 @@
+---
+export interface Props {
+    highlight?: string;
+    lgText?: string;
+    title?: string;
+    description?: string;
+    rateMonth?: string;
+    rateHour?: string;
+    extraHours?: string;
+    budgetTitle?: string;
+    budgetAmt?: string;
+}
+
+const {
+    highlight = await Astro.slots.render('highlight'),
+    lgText = await Astro.slots.render('lgText'),
+    title = await Astro.slots.render('title'),
+    description = await Astro.slots.render('description'),
+    rateMonth = await Astro.slots.render('rateMonth'),
+    rateHour = await Astro.slots.render('rateHour'),
+    extraHours = await Astro.slots.render('extraHours'),
+    budgetTitle = await Astro.slots.render('budgetTitle'),
+    budgetAmt = await Astro.slots.render('budgetAmt'),
+} = Astro.props;
+---
+
+<section class="scroll-mt-16 px-20" id="qualityvidgraphics">
+    <div class="lg:py-20 px-4 mx-auto max-w-6xl lg:px-8">
+
+    </div>
+</section>
