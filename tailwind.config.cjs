@@ -16,6 +16,9 @@ module.exports = {
         serif: ['var(--aw-font-serif)', ...defaultTheme.fontFamily.serif],
         heading: ['var(--aw-font-heading)', ...defaultTheme.fontFamily.sans],
       },
+      backgroundImage: {
+        'home-bg': "url('/src/assets/images/video_test.gif')",
+      }
     },
   },
   plugins: [require('@tailwindcss/typography')],
