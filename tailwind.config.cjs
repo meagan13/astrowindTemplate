@@ -9,6 +9,7 @@ module.exports = {
         primary: 'var(--aw-color-primary)',
         secondary: 'var(--aw-color-secondary)',
         accent: 'var(--aw-color-accent)',
+        light: 'var(--aw-color-bg-page)',
         ns_green: '#63c7c3'
       },
       fontFamily: {
@@ -16,6 +17,9 @@ module.exports = {
         serif: ['var(--aw-font-serif)', ...defaultTheme.fontFamily.serif],
         heading: ['var(--aw-font-heading)', ...defaultTheme.fontFamily.sans],
       },
+      backgroundImage: {
+        'home-bg': "url('/src/assets/images/video_test.gif')",
+      }
     },
   },
   plugins: [require('@tailwindcss/typography')],

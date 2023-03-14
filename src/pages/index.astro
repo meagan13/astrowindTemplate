@@ -9,6 +9,7 @@ import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import LatestPosts from '~/components/blog/LatestPosts.astro';
+import LatestCasePosts from '~/components/case_studies/LatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
@@ -27,11 +28,8 @@ const meta = {
 
 <Layout {meta}>
   <!-- Hero Widget ******************* -->
-
-  <Hero
-    callToAction2={{ text: '▶️ OUR WORK', href: '#features' }}
-  >
-    
+<div>
+  <Hero>  
   <Fragment slot="title">
       Socialize Your Content 
     </Fragment>
@@ -41,9 +39,15 @@ const meta = {
         Professional help building your video and graphical content to market and grow your business with easy & flexible plans.
       </span>
     </Fragment>
-    
-  </Hero>
-
+  </Hero> 
+</div>
+    <div class="bg-home-bg">
+      <Hero
+        callToAction2={{ text: '▶️ OUR WORK', href: '#features' }}
+      >
+    </Hero>
+    </div>   
+  
   <!-- Note Widget ******************* -->
 
   <!-- <Note /> -->
@@ -196,8 +200,8 @@ const meta = {
               },
             ]
           ],
-          blogTitle='How to Create Effective Social Media Ads: Tips from Socialize',
-          description="Add however many of the first characters that we want to include",
+          blogTitle:'How to Create Effective Social Media Ads: Tips from Socialize',
+          description:"Add however many of the first characters that we want to include",
         },
         {
           img:'../src/assets/images/camera.jpg',
@@ -454,8 +458,8 @@ const meta = {
 
   <!-- HighlightedPosts Widget ******* -->
 
-  <LatestPosts
-    title="Find out more content in our Blog"
+  <LatestCasePosts
+    title="Find out more from our Case Studies"
     information={`The blog is used to display AstroWind documentation.
 			Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
 			Astro is a very interesting technology. Thanks.
