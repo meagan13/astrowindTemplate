@@ -19,7 +19,23 @@ const post = defineCollection({
   }),
 });
 
+const profile = defineCollection({
+  schema: z.object({
+    name: z.string(),
+    title: z.string(),
+    description: z.string().optional(),
+    image: z.string().optional(),
+
+    draft: z.boolean().optional(),
+
+    quote: z.string().optional(),
+    category: z.string().optional(),
+  }),
+});
+
+// The name of the collection must match the name of the folder in the /src/content/collections/ directory.
 export const collections = {
   'post': post,
   'case-study': post,
+  'team': profile,
 };

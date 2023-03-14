@@ -1,23 +1,50 @@
 ---
-import type { Card } from '~/types';
-
-export interface Props {
-    card: Card;
-}
+// import type { Card } from '~/types';
+import { Picture } from '@astrojs/image/components';
 
 const { card } = Astro.props;
+
+const src = `{card.data.image}` ||  '../src/assets/images/doctor-10.svg'
 ---
 
-<div class="flex-col border-2 border-black rounded-lg">
-  <div class="h-40">
-    <img src={card.img}>
+<div class="flex w-80 md:w-full flex-col rounded-lg">
+  <div
+    class="relative w-full h-40 rounded-lg bg-muted-200 dark:bg-muted-800 pb-4 bg-ns_green"
+  >
+    {(card.data.image) && (<Picture
+      src={card.data.image}
+      class="absolute bottom-0 inset-x-0 mx-auto w-full max-w-[170px] ptablet:max-w-[150px]"
+      widths={[400, 900]}
+      sizes="(max-width: 900px) 400px, 900px"
+      alt={`An avatar for ${card.data.name}`}
+      aspectRatio="3:4"
+      loading="lazy"
+      decoding="async"
+    />)} 
+    {(card.data.image == undefined) && (<Picture
+      src='../src/assets/images/doctor-10.svg'
+      class="absolute bottom-0 inset-x-0 mx-auto w-full max-w-[170px] ptablet:max-w-[150px]"
+      widths={[400, 900]}
+      sizes="(max-width: 900px) 400px, 900px"
+      alt={`An avatar for ${card.data.name}`}
+      aspectRatio="3:4"
+      loading="lazy"
+      decoding="async"
+    />)} 
   </div>
-  <div class="card__content">
-    <h3>
-      <a href={card.url}>{card.title}</a>
+  <div class="flex-auto">
+    <!-- class="card__content" -->
+    <h3 class="text-center font-bold text-xl">
+      {card.data.name}
     </h3>
-    <p>
-      {card.contents}
+    <h5 class="text-center">
+      {card.data.title}
+    </h5>
+    <p class="text-center">
+      {card.data.description}
+    </p>
+    <p class="text-center italic text-sm pb-4 px-4">
+      {card.data.quote}
     </p>
   </div>
 </div>

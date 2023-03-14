@@ -1,0 +1,24 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '~/layouts/PageLayout.astro';
+import Headline from '~/components/blog/Headline.astro';
+import CardList from '~/components/widgets/CardList.astro';
+
+// const { page } = Astro.props;
+
+const teamProfiles = await getCollection('team', ({data}) => {
+    return data.draft !== true;
+    });
+
+const meta = {
+  title: "Our Team",
+};
+---
+<Layout {meta}>
+<section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
+    <Headline>
+        Our Team
+    </Headline>
+<CardList cards={teamProfiles} />
+</section>  
+</Layout>

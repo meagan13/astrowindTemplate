@@ -13,7 +13,7 @@ export const headerData = {
     },
     {
       text: 'Packages',
-      href: getPermalink('/packages'),
+      href: getPermalink('/packages/packages'),
       // links: [
       //   {
       //     text: 'Features',
@@ -27,7 +27,7 @@ export const headerData = {
     },
     {
       text: 'Team',
-      href: getPermalink('/about/team'),
+      href: getPermalink('/team'),
     },
     {
       text: 'Courses',
