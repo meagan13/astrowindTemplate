@@ -33,9 +33,21 @@ const profile = defineCollection({
   }),
 });
 
+const packages = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    image: z.string().optional(),
+    alt: z.string().optional(),
+
+    draft: z.boolean().optional(),
+  }),
+});
+
 // The name of the collection must match the name of the folder in the /src/content/collections/ directory.
 export const collections = {
   'post': post,
   'case-study': post,
   'team': profile,
+  'packages': packages,
 };
