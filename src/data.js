@@ -13,7 +13,7 @@ export const headerData = {
     },
     {
       text: 'Packages',
-      href: getPermalink('/packages/packages'),
+      href: getPermalink('/packages'),
       // links: [
       //   {
       //     text: 'Features',
