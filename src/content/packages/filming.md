@@ -6,7 +6,6 @@ description2: More than likely, you have a full plate already. Let us help strea
 button: Packages
 video: ../../src/assets/videos/microscope.mov
 vidtype: video/mp4
-bgImage: ../../src/images/peopleComputer.jpg
 bgImageAlt: Two people looking at a laptop
 draft: false
 ---

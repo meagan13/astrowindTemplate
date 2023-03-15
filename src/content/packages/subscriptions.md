@@ -7,7 +7,5 @@ description2: Our subscription packages are perfect for those looking for a part
 button: Packages
 video: ../../src/assets/videos/microscope.mov
 vidtype: video/mp4
-bgImage: ../../src/images/peopleComputer.jpg
-bgImageAlt: Two people looking at a laptop
 draft: false
 ---

@@ -1,23 +1,46 @@
 ---
+import { Picture } from '@astrojs/image/components';
+
 const { packages } = Astro.props;
+
+const bgImageSrc = `{ card.data.bgImage }` || "";
 ---
 
-<div class="flex flex-wrap justify-center">
+<div class="flex flex-wrap justify-center relative">
     {
         packages.map((card) => (
 
         <section class="scroll-mt-16 px-20" id="needvideos">
-            <div class="flex justify-center lg:px-8 lg:py-20 ">
-                <div class="w-1/2 px-4">
-                    <div class="">
-                        <h2 class="text-xl md:text-3xl font-bold leading-tighter tracking-tighter mb-4 font-heading" set:html={ card.data.title }/>
-                        <p  set:html={ card.data.description1 } />
-                        <br />
-                        <p  set:html={ card.data.description2 } />
-                    </div>
+            <div class="bg-yellow-200 relative">
+                { (card.data.bgImage) && (
+                    <img 
+                        src={ card.data.bgImage } 
+                        alt={ card.data.bgImageAlt }
+                        class="absolute last:bg-no-repeat bg-cover bg-center bg-fixed"
+                    />
+                    // <Picture 
+                    //     src={ card.data.bgImage }
+                    //     class="bg-no-repeat bg-cover bg-center bg-fixed"
+                    //     widths={[400, 900]}
+                    //     sizes="(max-width: 900px) 400px, 900px"
+                    //     alt={ card.data.bgImageAlt }
+                    //     aspectRatio="3:4"
+                    //     loading="lazy"
+                    //     decoding="async"
+                    // />
+                )}
+            </div>
+
+
+            <div class="flex justify-center lg:px-8 lg:py-20">
+                <div class="w-1/2 pl-4 pr-8">
+                    <h2 class="text-xl md:text-3xl font-bold leading-tighter tracking-tighter mb-4 font-heading" set:html={ card.data.title }/>
+                    <p  set:html={ card.data.description1 } />
+                    <br />
+                    <p  set:html={ card.data.description2 } />
                 </div>
 
-                <div class="w-1/2">
+                <div class="flex items-center pl-8 pr-4 w-1/2">
                     <video width="480" height="269" controls>
                         <source src={ card.data.video } type={ card.data.vidtype }>
                         Your browser does not support the video tag.
