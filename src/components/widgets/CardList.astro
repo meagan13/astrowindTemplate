@@ -2,19 +2,15 @@
 import Item from '~/components/widgets/Card.astro';
 import type { Card } from '~/types';
 
-export interface Props {
-  cards: Array<Card>;
-}
-
 const { cards } = Astro.props;
 ---
 
-  <ul class="grid md:grid-cols-2 gap-10">
+<div class="flex flex-wrap justify-center">
     {
       cards.map((card) => (
-        <li class="mb-12 md:mb-20">
+      <div class="px-6 pt-16 pb-6 relative rounded-lg md:w-1/3">
           <Item card={card}/>
-        </li>
+      </div>
       ))
     }
-  </ul>
+</div>

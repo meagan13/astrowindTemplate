@@ -1,10 +1,8 @@
 ---
-name: Name
-title: Role
-description: Description of role
-quote: Favorite Quote
-image: ~/assets/images/stickers.jpg
-image_alt: A profile picture of name
+name: Jeff
+title: Awesome Role
+description: We do cool stuff
+quote: What is the airspeed velocity of an unlaiden swallow? Sometimes people can be sorta wordy so here is some extra quote content to test out
 category: Category
-draft: false
+draft: true
 ---

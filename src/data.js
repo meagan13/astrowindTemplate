@@ -27,7 +27,7 @@ export const headerData = {
     },
     {
       text: 'Team',
-      href: getPermalink('/about/team'),
+      href: getPermalink('/team'),
     },
     {
       text: 'Courses',
@@ -39,7 +39,7 @@ export const headerData = {
     },
   ],
   actions: [
-    { type: 'button', text: 'Download', href: 'https://github.com/onwidget/astrowind' }
+    { type: 'button', text: 'FREE SCRIPTING', href: 'https://socialize.video/scheduler/' }
   ],
 };
   

@@ -3,8 +3,7 @@ name: Name
 title: Role
 description: Description of role
 quote: Favorite Quote
-image: ~/assets/images/stickers.jpg
-image_alt: A profile picture of name
+image: ../src/assets/images/doctor-12.svg
 category: Category
 draft: false
 ---

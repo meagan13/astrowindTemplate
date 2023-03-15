@@ -2,7 +2,9 @@
 import { getCollection } from 'astro:content';
 import Layout from '~/layouts/PageLayout.astro';
 import Headline from '~/components/blog/Headline.astro';
+import CardList from '~/components/widgets/CardList.astro';
 
+// const { page } = Astro.props;
 
 const teamProfiles = await getCollection('team', ({data}) => {
     return data.draft !== true;
@@ -17,16 +19,6 @@ const meta = {
     <Headline>
         Our Team
     </Headline>
-<ul>
-    {teamProfiles.map((profile) => (
-        <li class="mb-12 md:mb-20">
-            <img src={profile.data.image} alt={profile.data.image_alt} />
-            {profile.data.name}
-            {profile.data.title}
-            {profile.data.description}
-            {profile.data.quote}
-        </li>
-    ))}
-</ul>
+<CardList cards={teamProfiles} />
 </section>  
 </Layout>

@@ -9,6 +9,8 @@ module.exports = {
         primary: 'var(--aw-color-primary)',
         secondary: 'var(--aw-color-secondary)',
         accent: 'var(--aw-color-accent)',
+        light: 'var(--aw-color-bg-page)',
+        ns_green: '#63c7c3'
       },
       fontFamily: {
         sans: ['var(--aw-font-sans)', ...defaultTheme.fontFamily.sans],
@@ -17,8 +19,15 @@ module.exports = {
       },
       backgroundImage: {
         'pplComputer': "url('/src/assets/images/peopleComputer.jpg')",
+        'home-bg': "url('/src/assets/images/video_test.gif')",
       },
-
+      maxWidth: {
+        '1/2': '50%',
+        '1/4': '25%',
+        '3/4': '75%',
+        '1/3': '33.333333%',
+        '2/3': '66.666667%',
+      }
     },
   },
   plugins: [require('@tailwindcss/typography')],
