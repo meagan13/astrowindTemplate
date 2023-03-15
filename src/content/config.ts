@@ -37,7 +37,8 @@ const packages = defineCollection({
   schema: z.object({
     title: z.string(),
     excerpt: z.string().optional(),
-    description: z.string().optional(),
+    description1: z.string().optional(),
+    description2: z.string().optional(),
     button: z.string().optional(),
     video: z.string().optional(),
     vidtype: z.string().optional(),
