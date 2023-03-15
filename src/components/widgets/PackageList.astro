@@ -1,0 +1,55 @@
+---
+const { packages } = Astro.props;
+---
+
+<div class="flex flex-wrap justify-center">
+    {
+      packages.map((card) => (
+
+
+      <section class="scroll-mt-16 px-20" id="needvideos">
+    <div>
+        <div class="flex flex-wrap bg-cover bg-center bg-no-repeat">
+            <div class="title lg:w-1/2 px-4 py-16 mx-auto max-w-6xl lg:px-8 lg:py-20">
+                {
+                    (card.data.title && (
+                        <div class="mb-10 md:mx-auto md:mb-12 max-w-3xl">
+                                                
+                        {card.data.title && (
+                            <h2
+                            class="text-xl md:text-3xl font-bold leading-tighter tracking-tighter mb-4 font-heading"
+                            set:html={ card.data.title }
+                            />
+                            <p
+                            set:html={ card.data.description }
+                            />
+                        )}
+
+                        {card.data.description && (
+                            <p class="max-w-3xl mx-auto text-xl text-muted dark:text-slate-400" set:html={ card.data.decription } />
+                        )}
+                        </div>
+                        )
+                    )
+                }
+            </div>
+
+            <div class="video flex items-center justify-end px-6 lg:w-1/2">
+                <div class="">
+                    <video width="480" height="269" controls>
+                        <source src={ card.data.video } type={ card.data.vidtype }>
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+      ))
+    }
+</div>
+

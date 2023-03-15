@@ -36,10 +36,18 @@ const profile = defineCollection({
 const packages = defineCollection({
   schema: z.object({
     title: z.string(),
+    excerpt: z.string().optional(),
     description: z.string().optional(),
+    button: z.string().optional(),
+    video: z.string().optional(),
+    vidtype: z.string().optional(),
+    bgImage: z.string().optional(),
+    bgImageAlt: z.string().optional(),
+    benefits: z.string().optional(),
+    rates: z.string().optional(),
+    services: z.string().optional(),
     image: z.string().optional(),
     alt: z.string().optional(),
-
     draft: z.boolean().optional(),
   }),
 });
