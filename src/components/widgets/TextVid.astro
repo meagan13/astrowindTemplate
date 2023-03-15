@@ -5,6 +5,7 @@ export interface Props {
     description2?: string;
     video?: string;
     vidtype?: string;
+    bgImage?: string;
 }
 
 const {
@@ -12,40 +13,47 @@ const {
     description1 = await Astro.slots.render('description1'),
     description2 = await Astro.slots.render('description2'),
     video = await Astro.slots.render('video'),
-    vidtype = await Astro.slots.render('vidtype')
+    vidtype = await Astro.slots.render('vidtype'),
+    bgImage = await Astro.slots.render('bgImage')
 } = Astro.props;
 ---
+<!-- <div class="relative h-96 w-full bg-green-900 opacity-75"></div> -->
 
 <section class="scroll-mt-16 px-20" id="needvideos">
-    <div class="flex">
-        <div class="title text-center px-4 py-16 mx-auto max-w-6xl lg:px-8 lg:py-20">
-            {
-                (title && (
-                    <div class="mb-10 md:mx-auto text-center md:mb-12 max-w-3xl">
-                    
-                    {title && (
-                        <h2
-                        class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading"
-                        set:html={title}
-                        />
-                    )}
-
-                    {description1 && (
-                        <p class="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400" set:html={description1} />
-                        <br />
-                        <p class="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400" set:html={description2} />
+    <div>
+        <div class="flex flex-wrap bg-cover bg-center bg-no-repeat">
+            <div class="title lg:w-1/2 px-4 py-16 mx-auto max-w-6xl lg:px-8 lg:py-20">
+                {
+                    (title && (
+                        <div class="mb-10 md:mx-auto md:mb-12 max-w-3xl">
+                                                
+                        {title && (
+                            <h2
+                            class="text-xl md:text-3xl font-bold leading-tighter tracking-tighter mb-4 font-heading"
+                            set:html={title}
+                            />
                         )}
-                    </div>
-                    )
-                )
-            }
-        </div>
-            <video width="320" height="240" controls>
-                <source src={ video } type={ vidtype }>
-                Your browser does not support the video tag.
-            </video>
-        <div>
 
+                        {description1 && (
+                            <p class="max-w-3xl mx-auto text-xl text-muted dark:text-slate-400" set:html={description1} />
+                            <br />
+                            <p class="max-w-3xl mx-auto text-xl text-muted dark:text-slate-400" set:html={description2} />
+                            )}
+                        </div>
+                        )
+                    )
+                }
+            </div>
+
+            <div class="video flex items-center justify-end px-6 lg:w-1/2">
+                <div class="">
+                    <video width="480" height="269" controls>
+                        <source src={ video } type={ vidtype }>
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
         </div>
     </div>
 </section>
+
