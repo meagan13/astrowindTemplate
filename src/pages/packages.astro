@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import Layout from '~/layouts/PageLayout.astro';
 import PackageList from '~/components/widgets/PackageList.astro';
 
+
 const packages= await getCollection('packages', ({ data }) => {
     return data.draft !== true;
 });

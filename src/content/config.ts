@@ -50,6 +50,10 @@ const packages = defineCollection({
     image: z.string().optional(),
     alt: z.string().optional(),
     draft: z.boolean().optional(),
+    benefitIcons: z.array(z.string()).optional(),
+    benefitIconAlts: z.array(z.string()).optional(),
+    benefitTitles: z.array(z.string()).optional(),
+    benefitDescriptions: z.array(z.string()).optional(),
   }),
 });
 
