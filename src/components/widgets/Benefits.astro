@@ -3,9 +3,10 @@ const { packages } = Astro.props;
 ---
 
 <div>
+    <section class="scroll-mt-16 px-5 md:px-10 lg:px-20" id="benefits">
     {
         packages.map((card) => (
-            <section class="scroll-mt-16 px-5 md:px-10 lg:px-20" id="benefits">
+            
                                 
                 <div class="grid grid-cols-2 gap-1 lg:flex lg:flex-col">
                     
@@ -30,8 +31,9 @@ const { packages } = Astro.props;
                     </div>
                     
                 </div>
-            </section>
+                
+            
         ))
     }
-
+    </section>
 </div>
