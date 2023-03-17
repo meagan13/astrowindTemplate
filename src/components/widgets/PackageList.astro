@@ -61,7 +61,7 @@ const { packages } = Astro.props;
 
 
 
-            <div class="bg-orange-200">
+            <div class="">
                 {
                     card.data.benefitTitleDescriptionOld?.map((benefit, i) => (  
                         i % 2 == 0 ? (
@@ -70,11 +70,17 @@ const { packages } = Astro.props;
                     ))
                 }
 
+            </div>
+
+            <div class="bg-orange-300 flex flex-col">            
                 {
                     card.data.benefitTitleDescription?.map((listItem) => (
-                        <p class="font-bold">{ listItem[0] }</p>
-                        <p>{ listItem[1] }</p>
-                        
+                       <div class="flex border justify-center w-full">
+                            <div class="flex flex-col items-center justify-center">   
+                                <p class="font-bold">{ listItem[0] }</p>
+                                <p>{ listItem[1] }</p>
+                            </div> 
+                        </div>
                     ))
                 }
             </div>

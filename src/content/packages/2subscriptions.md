@@ -28,12 +28,20 @@ benefitTitleDescriptionOld:
 benefitTitleDescription:
     [
         [
-        title1,
-        describe1
+        NO Long-Term Contracts,
+        Cancel anytime with a simple 30-day notice
         ],
         [
-        title2,
-        describe2
+        Carry Over Hours,
+        Don't use all your hours. Carry them over one month
+        ],
+        [
+        Organized,
+        Catalog your video clips, animations, and more
+        ],
+        [
+        On Budget,
+        We work at your budget and report the hours used
         ]
     ]
 draft: false
