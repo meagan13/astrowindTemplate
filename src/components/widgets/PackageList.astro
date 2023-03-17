@@ -72,13 +72,22 @@ const { packages } = Astro.props;
 
             </div>
 
-            <div class="bg-orange-300 flex flex-col">            
+            <div class="flex flex-col md:flex-row bg-orange-200">            
                 {
                     card.data.benefitTitleDescription?.map((listItem) => (
-                       <div class="flex border justify-center w-full">
-                            <div class="flex flex-col items-center justify-center">   
-                                <p class="font-bold">{ listItem[0] }</p>
-                                <p>{ listItem[1] }</p>
+                       <div class="flex flex-col border justify-center items-center mb-5">
+                            <div class="mb-4">
+                                <img 
+                                    src={ listItem[0] } 
+                                    alt={ listItem[1] }
+                                    class="bg-green-200 rounded-full p-10"
+                                />
+                            </div>    
+
+
+                            <div class="flex flex-col items-center justify-center w-56 h-28">   
+                                <p class="font-bold">{ listItem[2] }</p>
+                                <p class="text-center px-10 py-2">{ listItem[3] }</p>
                             </div> 
                         </div>
                     ))

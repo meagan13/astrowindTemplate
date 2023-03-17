@@ -28,18 +28,26 @@ benefitTitleDescriptionOld:
 benefitTitleDescription:
     [
         [
+        ../../src/assets/images/play.png,
+        play icon,
         NO Long-Term Contracts,
         Cancel anytime with a simple 30-day notice
         ],
         [
+        ../../src/assets/images/play.png,
+        play icon,
         Carry Over Hours,
         Don't use all your hours. Carry them over one month
         ],
         [
+        ../../src/assets/images/play.png,
+        play icon,
         Organized,
         Catalog your video clips, animations, and more
         ],
         [
+        ../../src/assets/images/play.png,
+        play icon,
         On Budget,
         We work at your budget and report the hours used
         ]
