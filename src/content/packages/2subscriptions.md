@@ -16,7 +16,7 @@ benefitDescriptions:
 - Don't use all your hours. Carry them over one month
 - Catalog your video clips, animations, and more
 - We work at your budget and report the hours used
-benefitTitleDescription:
+benefitTitleDescriptionOld:
 - NO Long-Term Contracts
 - Cancel anytime with a simple 30-day notice
 - Carry Over Hours
@@ -25,5 +25,16 @@ benefitTitleDescription:
 - Catalog your video clips, animations, and more
 - On Budget
 - We work at your budget and report the hours used
+benefitTitleDescription:
+    [
+        [
+        title1,
+        describe1
+        ],
+        [
+        title2,
+        describe2
+        ]
+    ]
 draft: false
 ---

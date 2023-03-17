@@ -61,9 +61,22 @@ const { packages } = Astro.props;
 
 
 
-            <div>
-               
-                
+            <div class="bg-orange-200">
+                {
+                    card.data.benefitTitleDescriptionOld?.map((benefit, i) => (  
+                        i % 2 == 0 ? (
+                            <p class="font-bold col-start-1" set:html={ benefit} />
+                        ) : <p set:html={ benefit } />
+                    ))
+                }
+
+                {
+                    card.data.benefitTitleDescription?.map((listItem) => (
+                        <p class="font-bold">{ listItem[0] }</p>
+                        <p>{ listItem[1] }</p>
+                        
+                    ))
+                }
             </div>
 
 
