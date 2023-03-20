@@ -17,5 +17,32 @@ benefitDescriptions:
 - Filming will be in your local area or wherever you need
 - Everything included to get to your final videos made
 bgImageAlt: Two people looking at a laptop
+benefitTitleDescription:
+    [
+        [
+        ../../src/assets/images/play.png,
+        play icon,
+        Scripting,
+        We'll expertly plan and write your video scripts
+        ],
+        [
+        ../../src/assets/images/play.png,
+        play icon,
+        Video Professionals,
+        We'll put together the perfect filming team for your needs
+        ],
+        [
+        ../../src/assets/images/play.png,
+        play icon,
+        Local,
+        Filming will be in your local area or wherever you need
+        ],
+        [
+        ../../src/assets/images/play.png,
+        play icon,
+        Video Editing,
+        Everything included to get to your final videos made
+        ]
+    ]
 draft: false
 ---

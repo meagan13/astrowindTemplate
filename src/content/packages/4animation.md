@@ -6,5 +6,32 @@ description2: Our 2D animation process is simple but animation is far from a sim
 button: Packages
 video: ../../src/assets/videos/microscope.mov
 vidtype: video/mp4
+benefitTitleDescription:
+    [
+        [
+        ../../src/assets/images/play.png,
+        play icon,
+        Scripting,
+        We'll expertly plan and write your video scripts
+        ],
+        [
+        ../../src/assets/images/play.png,
+        play icon,
+        Illustration,
+        Your message through creative illustration 
+        ],
+        [
+        ../../src/assets/images/play.png,
+        play icon,
+        Voiceover,
+        Including a professional voiceover actor
+        ],
+        [
+        ../../src/assets/images/play.png,
+        play icon,
+        Custom,
+        Everything is created for you and your brand
+        ]
+    ]
 draft: false
 ---

@@ -11,8 +11,8 @@ const { packages } = Astro.props;
     {
         packages.map((card) => (
 
-        <section class="scroll-mt-16 px-5 md:px-10 only:lg:px-20" id="packageList">
-            <div class="bg-purple-200 flex flex-col lg:flex-row justify-center items-center lg:px-8 lg:py-20">
+        <section class="scroll-mt-16 px-5 w-full md:px-10 lg:px-20" id="packageList">
+            <div class="flex flex-col lg:flex-row justify-center items-center lg:px-8 lg:py-20">
                 <div class="w-full pb-10 lg:w-1/2 lg:pl-4 lg:backdrop:pr-8">
                     <h2 class="text-xl md:text-3xl font-bold leading-tighter tracking-tighter mb-4 font-heading" set:html={ card.data.title }/>
                     <p  set:html={ card.data.description1 } />
@@ -26,76 +26,39 @@ const { packages } = Astro.props;
                         Your browser does not support the video tag.
                     </video>
                 </div>
+            </div>
 
-                <div>
-                    {
-                        card.data.benefitTitleDescription?.map((benefit, i) => (  
-                            i % 2 == 0 ? (
-                                <p class="font-bold col-start-1" set:html={ benefit } />
-                            ) : <p set:html={ benefit } />
-                        ))
-                    }
-                    
+            { card.data.benefitTitleDescription && 
+            
+            <div class="lg:px-8">
+                <div class="w-full pb-2 lg:w-1/2 lg:pl-4 lg:backdrop:pr-8">
+                    <h2 class="text-xl md:text-3xl font-bold leading-tighter tracking-tighter mb-4 font-heading" set:html="Benefits" />
                 </div>
 
-                <div class="grid grid-col-2 grid-row-4 w-full -mx-20">
-
-                    <div class="grid grid-rows-4 grid-cols-1">
-                    {
-                        card.data.benefitTitles?.map((benefit) => (
-                            <p class="font-bold col-start-1" set:html={ benefit } />
-                        ))
-                    }
-                    </div>
-
-                    <div class="grid grid-rows-4 grid-cols-1">
-                    {
-                        card.data.benefitDescriptions?.map((description, i) => (
-                            <p class="font-light col-start-2 " set:html={ description } />
-                        ))
-                    }
-                    </div>
+                <div class="flex flex-col items-center justify-center flex-wrap max-w-full md:flex-row ">            
                 
+                    {
+                        card.data.benefitTitleDescription?.map((listItem) => (
+                        <div class="flex flex-col justify-center items-center mb-5">
+                                <div class="mb-4">
+                                    <img 
+                                        src={ listItem[0] } 
+                                        alt={ listItem[1] }
+                                        class="bg-green-200 rounded-full p-10"
+                                    />
+                                </div>    
+
+
+                                <div class="flex flex-col items-center justify-start w-56 h-28">   
+                                    <p class="font-bold">{ listItem[2] }</p>
+                                    <p class="text-center px-10 py-2">{ listItem[3] }</p>
+                                </div> 
+                            </div>
+                        ))
+                    }
                 </div>
             </div>
-
-
-
-            <div class="">
-                {
-                    card.data.benefitTitleDescriptionOld?.map((benefit, i) => (  
-                        i % 2 == 0 ? (
-                            <p class="font-bold col-start-1" set:html={ benefit} />
-                        ) : <p set:html={ benefit } />
-                    ))
-                }
-
-            </div>
-
-            <div class="flex flex-col md:flex-row bg-orange-200">            
-                {
-                    card.data.benefitTitleDescription?.map((listItem) => (
-                       <div class="flex flex-col border justify-center items-center mb-5">
-                            <div class="mb-4">
-                                <img 
-                                    src={ listItem[0] } 
-                                    alt={ listItem[1] }
-                                    class="bg-green-200 rounded-full p-10"
-                                />
-                            </div>    
-
-
-                            <div class="flex flex-col items-center justify-center w-56 h-28">   
-                                <p class="font-bold">{ listItem[2] }</p>
-                                <p class="text-center px-10 py-2">{ listItem[3] }</p>
-                            </div> 
-                        </div>
-                    ))
-                }
-            </div>
-
-
-
+            }
 
         </section>
         ))
