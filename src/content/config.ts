@@ -59,6 +59,10 @@ const packages = defineCollection({
       z.string().optional(),
       z.string().optional(),
     )).optional(), 
+    includedServices: z.array(z.string()).optional(),
+    servicesImage: z.string().optional(),
+    servicesImageAlt: z.string().optional(),
+    servicesColor: z.string().optional(),
     // testListsObject: z.object({
     //   title: z.array(z.string()).optional(),
     //   describe: z.array(z.string()).optional(),

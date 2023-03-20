@@ -5,14 +5,29 @@ const { packages } = Astro.props;
 
 // const bgImageSrc = `{ card.data.bgImage }` || "";
 
+const servicesImgSrc = `{ card.data.servicesImage}`
+
+let backgroundColor = "gray-100";
+
 ---
+<script>
+    const buttons = document.querySelectorAll('button.learnMore');
 
-<div class="flex flex-wrap justify-center relative">
+    buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+            alert('Add link to scheduler')
+        })
+    })
+</script>
+
+
+<div class={`flex flex-wrap justify-center relative bg-${ backgroundColor }`}>
     {
-        packages.map((card) => (
+        packages.map((card, i) => (
 
-        <section class="scroll-mt-16 px-5 w-full md:px-10 lg:px-20" id="packageList">
-            <div class="flex flex-col lg:flex-row justify-center items-center lg:px-8 lg:py-20">
+        <section class="scroll-mt-16 px-5 w-full md:px-10 lg:px-20 border-b-4 pb-4" id="packageList">
+
+            <div class="flex flex-col justify-center items-center py-8 md:py-10 lg:flex-row lg:px-8 lg:py-20">
                 <div class="w-full pb-10 lg:w-1/2 lg:pl-4 lg:backdrop:pr-8">
                     <h2 class="text-xl md:text-3xl font-bold leading-tighter tracking-tighter mb-4 font-heading" set:html={ card.data.title }/>
                     <p  set:html={ card.data.description1 } />
@@ -30,9 +45,9 @@ const { packages } = Astro.props;
 
             { card.data.benefitTitleDescription && 
             
-            <div class="lg:px-8">
+            <div class="lg:px-8" id="benefitsDiv">
                 <div class="w-full pb-2 lg:w-1/2 lg:pl-4 lg:backdrop:pr-8">
-                    <h2 class="text-xl md:text-3xl font-bold leading-tighter tracking-tighter mb-4 font-heading" set:html="Benefits" />
+                    <h2 class="text-xl md:text-2xl font-bold leading-tighter tracking-tighter mb-4 font-heading" set:html="Benefits" />
                 </div>
 
                 <div class="flex flex-col items-center justify-center flex-wrap max-w-full md:flex-row ">            
@@ -60,8 +75,40 @@ const { packages } = Astro.props;
             </div>
             }
 
+            { card.data.includedServices &&
+            <div class="lg:px-8 pt-10 md:bg-[url('../../src/assets/images/camera-man.png')] bg-hero bg-no-repeat bg-contain bg-right" id="includedServicesDiv">
+                <div>
+                    <div class="w-full pb-2 lg:w-1/2 lg:pl-4 lg:backdrop:pr-8">
+                        <h2 class="text-xl md:text-2xl font-bold leading-tighter tracking-tighter mb-4 font-heading" set:html="Included Services" />
+                    </div>
+                </div>
+            
+
+                <div class="flex justify-start flex-wrap w-full md:w-1/2 lg:w-2/3 lg:backdrop:pr-8">            
+                    
+                    {
+                        card.data.includedServices?.map((service) => (
+                            <div class="flex mb-2 pb-2 lg:pl-4 text-left">
+                                <p set:html={ service }/>
+                            </div>
+                            ))
+                    }
+                </div>
+
+                <div class="pl-4">
+                    <button class="px-8 py-2 rounded bg-indigo-900 learnMore">
+                        <p class="text-white" set:html="Learn More" />
+                    </button>    
+
+
+                </div>
+            </div>
+            }
+
         </section>
         ))
     }
 </div>
+
+
 

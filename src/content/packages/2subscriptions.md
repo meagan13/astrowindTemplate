@@ -52,5 +52,14 @@ benefitTitleDescription:
         We work at your budget and report the hours used
         ]
     ]
+includedServices:
+    [
+        Get more than just our amazing video services. Get access to our whole team of video editors, motion graphic designers, content strategists, graphic designers, and illustrators.,
+        That's right! We can manipulate photos and static graphics that go hand-in-hand with your video content.,
+        Enjoy simplified payments. On the first of each month, we’ll charge your selected payment method. Any additional hours over the set of monthly hours will be charged on the 1st of the following month.,
+        Ready to get started? Have questions? Click the Purchase button below to be taken to a video that will give you more details and get you setup with your subscription package.,
+    ]
+servicesImage: ../../src/assets/images/camera-man.png
+servicesImageAlt: A man kneeling down and looking through a camera
 draft: false
 ---
