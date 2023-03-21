@@ -44,5 +44,14 @@ benefitTitleDescription:
         Everything included to get to your final videos made
         ]
     ]
+includedServices: 
+    [
+     Each project starts with a scripting session. This is where we will determine the details of your video show—what professionals we need clips to be filmed and more. You'll have a professional scriptwriter polish your script so it's ready for filming.,
+    Next we'll do the leg work of putting together the team of video professionals needed for the shoot. We'll determine who are our best options and negotiate their rates. We'll communicate high-quality standards and details of what's included. Rather than worrying about these details you can focus on preparing you and your team for the film day.,
+    Once the filming is done our post-production team will kick in. You'll have your video content within 10 business days of receiving the raw video footage. You'll be able to review your video content request changes and work to final videos.,
+    All packages include final videos in HD (1920x1080) and other aspect ratios (square vertical etc.) a commercial music license stock clips/images and a simple animation of your logo in the video.,
+    If you're not sure which package works best for you let us help. During your free scripting session we'll help you determine how much time you'll need for filming according to your specific needs.,
+    Ready to get started? Have questions? Then schedule your first scripting session by clicking below!
+    ]
 draft: false
 ---
