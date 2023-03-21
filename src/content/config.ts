@@ -36,11 +36,37 @@ const profile = defineCollection({
 const packages = defineCollection({
   schema: z.object({
     title: z.string(),
-    description: z.string().optional(),
+    excerpt: z.string().optional(),
+    description1: z.string().optional(),
+    description2: z.string().optional(),
+    button: z.string().optional(),
+    video: z.string().optional(),
+    vidtype: z.string().optional(),
+    bgImage: z.string().optional(),
+    bgImageAlt: z.string().optional(),
+    benefits: z.string().optional(),
+    rates: z.string().optional(),
+    services: z.string().optional(),
     image: z.string().optional(),
     alt: z.string().optional(),
-
     draft: z.boolean().optional(),
+    benefitIcons: z.array(z.string()).optional(),
+    benefitIconAlts: z.array(z.string()).optional(),
+    benefitTitles: z.array(z.string()).optional(),
+    benefitDescriptions: z.array(z.string()).optional(),
+    benefitTitleDescriptionOld: z.array(z.string()).optional(),
+    benefitTitleDescription: z.array(z.array(
+      z.string().optional(),
+      z.string().optional(),
+    )).optional(), 
+    includedServices: z.array(z.string()).optional(),
+    servicesImage: z.string().optional(),
+    servicesImageAlt: z.string().optional(),
+    servicesColor: z.string().optional(),
+    // testListsObject: z.object({
+    //   title: z.array(z.string()).optional(),
+    //   describe: z.array(z.string()).optional(),
+    // }).optional(),
   }),
 });
 

@@ -1,0 +1,33 @@
+                <div class="grid grid-col-2 grid-row-4 w-full -mx-20">
+
+                    <div class="grid grid-rows-4 grid-cols-1">
+                    {
+                        card.data.benefitTitles?.map((benefit) => (
+                            <p class="font-bold col-start-1" set:html={ benefit } />
+                        ))
+                    }
+                    </div>
+
+                    <div class="grid grid-rows-4 grid-cols-1">
+                    {
+                        card.data.benefitDescriptions?.map((description, i) => (
+                            <p class="font-light col-start-2 " set:html={ description } />
+                        ))
+                    }
+                    </div>
+                
+                </div>
+            </div>
+
+
+
+            <div class="">
+                {
+                    card.data.benefitTitleDescriptionOld?.map((benefit, i) => (  
+                        i % 2 == 0 ? (
+                            <p class="font-bold col-start-1" set:html={ benefit} />
+                        ) : <p set:html={ benefit } />
+                    ))
+                }
+
+            </div>

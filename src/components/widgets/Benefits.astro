@@ -1,0 +1,39 @@
+---
+const { packages } = Astro.props;
+---
+
+<div>
+    <section class="scroll-mt-16 px-5 md:px-10 lg:px-20" id="benefits">
+    {
+        packages.map((card) => (
+            
+                                
+                <div class="grid grid-cols-2 gap-1 lg:flex lg:flex-col">
+                    
+                    <div class="benefit-title grid grid-rows-4 lg:flex lg:w-1/2 lg:">
+                        { card.data.benefitTitles?.map(( benefitTitle ) => (
+                            <div class="row-span-1 col-span-1 flex items-center lg:content-start lg:w-1/4">
+                                <h2 class="font-bold w-full text-center">
+                                    { benefitTitle }
+                                </h2>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div class="benefit-description grid grid-rows-4 lg:flex lg:w-1/2">
+                        { card.data.benefitDescriptions?.map(( benefitDescription ) => (
+                            <div class="row-span-1 col-span-1 flex items-center lg:w-1/4">
+                                <h2 class="font-light w-full p-2 text-center text-sm">
+                                    { benefitDescription }
+                                </h2>
+                            </div>
+                        ))}
+                    </div>
+                    
+                </div>
+                
+            
+        ))
+    }
+    </section>
+</div>
