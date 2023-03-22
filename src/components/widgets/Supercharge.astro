@@ -1,5 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
+import { findImage } from '~/utils/images';
+
 interface Item {
   text1: string;
   text2: string;
@@ -23,6 +25,7 @@ const packageList = await getCollection('packages', ({ data }) => {
 });
 
 const { title = await Astro.slots.render('title'), items = [], packages = [] } = Astro.props;
+
 ---
 
 <section class="scroll-mt-16 px-20" id="supercharge">

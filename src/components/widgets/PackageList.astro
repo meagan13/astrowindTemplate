@@ -52,7 +52,7 @@ let backgroundColor = "gray-100";
 
         <section class="scroll-mt-16 px-5 w-full md:px-10 lg:px-20 border-b-4 pb-4" id="packageList">
 
-            <div class="flex flex-col justify-center items-center py-8 md:py-10 lg:flex-row lg:px-8 lg:py-20">
+            <div class="flex flex-col justify-center items-center py-4 lg:flex-row lg:px-8">
                 <div class="w-full pb-10 lg:w-1/2 lg:pl-4 lg:backdrop:pr-8">
                     <h2 class="text-xl md:text-3xl font-bold leading-tighter tracking-tighter mb-4 font-heading" set:html={ card.data.title }/>
                     <p  set:html={ card.data.description1 } />
@@ -60,7 +60,7 @@ let backgroundColor = "gray-100";
                     <p  set:html={ card.data.description2 } />
                 </div>
 
-                <div class="flex justify-center pb-10 lg:pl-8 lg:pr-4 w-full lg:w-1/2">
+                <div class="flex justify-center pb-8 lg:pl-8 lg:pr-4 w-full lg:w-1/2">
                     <video width="480" height="269" controls>
                         <source src={ card.data.video } type={ card.data.vidtype }>
                         Your browser does not support the video tag.
@@ -71,7 +71,7 @@ let backgroundColor = "gray-100";
             { card.data.benefitTitleDescription && 
             
             <div class="lg:px-8" id="benefitsDiv">
-                <div class="w-full pb-2 lg:w-1/2 lg:pl-4 lg:backdrop:pr-8">
+                <div class="w-full lg:w-1/2 lg:pl-4 lg:backdrop:pr-8">
                     <button id={`${ card.data.benefitTitleDescription} + Btn`} class="text-xl md:text-2xl font-bold leading-tighter tracking-tighter mb-4 font-heading showDivButton" set:html="Benefits"></button>
                 </div>
 
@@ -101,7 +101,7 @@ let backgroundColor = "gray-100";
             }
 
             { card.data.includedServices &&
-            <div class="lg:px-8 pt-10 " id="includedServicesDiv">
+            <div class="lg:px-8 pt-4 " id="includedServicesDiv">
                 <div>
                     <div class="w-full pb-2 lg:w-1/2 lg:pl-4 lg:backdrop:pr-8">
                         <button id={`${ card.data.includedServices} + Btn`} class="text-xl md:text-2xl font-bold leading-tighter tracking-tighter mb-4 font-heading showDivButton" set:html="Included Services" />
