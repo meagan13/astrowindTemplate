@@ -71,8 +71,8 @@ let backgroundColor = "gray-100";
             { card.data.benefitTitleDescription && 
             
             <div class="lg:px-8" id="benefitsDiv">
-                <div class="w-full lg:w-1/2 lg:pl-4 lg:backdrop:pr-8">
-                    <button id={`${ card.data.benefitTitleDescription} + Btn`} class="text-xl md:text-2xl font-bold leading-tighter tracking-tighter mb-4 font-heading showDivButton" set:html="Benefits"></button>
+                <div class="w-full lg:pl-4 lg:backdrop:pr-8">
+                    <button id={`${ card.data.benefitTitleDescription} + Btn`} class="text-xl border-2 rounded w-full px-4 py-2 md:text-2xl font-bold leading-tighter tracking-tighter mb-4 font-heading showDivButton" set:html="Benefits"></button>
                 </div>
 
                 <div class="hidden flex-col items-center justify-center flex-wrap max-w-full md:flex-row " id={`${ card.data.benefitTitleDescription} + Btn1`}>            
@@ -101,10 +101,10 @@ let backgroundColor = "gray-100";
             }
 
             { card.data.includedServices &&
-            <div class="lg:px-8 pt-4 " id="includedServicesDiv">
+            <div class="lg:px-8 pt-2 " id="includedServicesDiv">
                 <div>
-                    <div class="w-full pb-2 lg:w-1/2 lg:pl-4 lg:backdrop:pr-8">
-                        <button id={`${ card.data.includedServices} + Btn`} class="text-xl md:text-2xl font-bold leading-tighter tracking-tighter mb-4 font-heading showDivButton" set:html="Included Services" />
+                    <div class="w-full pb-2 lg:pl-4 lg:backdrop:pr-8">
+                        <button id={`${ card.data.includedServices} + Btn`} class="text-xl border-2 rounded w-full px-4 py-2 md:text-2xl font-bold leading-tighter tracking-tighter mb-4 font-heading showDivButton" set:html="Included Services" />
                     </div>
                 </div>
             
@@ -120,12 +120,10 @@ let backgroundColor = "gray-100";
                     }
                 </div>
 
-                <div class="pl-4">
-                    <button class="px-8 py-2 rounded bg-indigo-900 schedulerButton">
-                        <p class="text-white" set:html="Learn More" />
+                <div class="flex justify-center md:pl-4 ">
+                    <button class="px-8 py-2 rounded-full bg-indigo-900 schedulerButton">
+                        <p class="text-white" set:html="Schedule a Consultation" />
                     </button>    
-
-
                 </div>
             </div>
             }
