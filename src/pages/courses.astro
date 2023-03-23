@@ -16,11 +16,33 @@ const meta = {
     image: await findImage(courseProp?.image)
 }
 
+function testFunctionYAML() {
+    alert("Test button clicked")
+    console.log("Courses:", { courses })
+}
+
 export interface Props {
     course: Course;
 }
 
 ---
+
+<script>
+    const buttons = document.querySelectorAll('button.testAlert');
+
+    function testFunction() {
+        alert("Test button clicked")
+        console.log("Buttons", buttons)
+    }
+
+    buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+            testFunction()
+            // testFunctionYAML()
+        })
+    })
+</script>
+
 <Layout { meta }>
     <h1>Courses</h1>
     <div>
@@ -40,11 +62,12 @@ export interface Props {
         />
 
         {
-            courses?.map((course, i) => (
+            courses.map((course, i) => (
                 <div>
                     { course.title }
                 </div>
 
+                <button class="testAlert rounded-full px-4 bg-green-600">Test</button>
 
             ))
         }
