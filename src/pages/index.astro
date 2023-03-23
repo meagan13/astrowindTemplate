@@ -1,5 +1,6 @@
 ---
 import { SITE } from '~/config.mjs';
+
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
@@ -18,6 +19,8 @@ import Supercharge from '~/components/widgets/Supercharge.astro';
 import QualityVidGraphics from '~/components/widgets/QualityVidGraphics.astro'
 import Testimonials from '~/components/widgets/Testimonials.astro';
 import CaseStudies from '~/components/widgets/CaseStudies.astro';
+
+const { packages } = Astro.props;
 
 const meta = {
   title: SITE.title,

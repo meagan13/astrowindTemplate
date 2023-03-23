@@ -29,10 +29,10 @@ export const headerData = {
       text: 'Team',
       href: getPermalink('/team'),
     },
-    // {
-    //   text: 'Courses',
-    //   href: getPermalink('/courses'),
-    // },
+    {
+      text: 'Courses',
+      href: getPermalink('/courses'),
+    },
     {
       text: 'Blog',
       href: getBlogPermalink('/blog'),

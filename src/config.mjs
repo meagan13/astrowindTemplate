@@ -84,9 +84,11 @@ const CONFIG = {
       disabled: false,
     },
   },
+
 };
 
 export const SITE = { ...CONFIG, blog: undefined, case_study: undefined };
 export const BLOG = CONFIG.blog;
 export const CASE_STUDY = CONFIG.case_study;
 export const DATE_FORMATTER = CONFIG.dateFormatter;
+

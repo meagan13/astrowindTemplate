@@ -44,3 +44,8 @@ export interface Card {
   title: string, 
   contents?: string,
 }
+
+export interface Course {
+  title?: string,
+  image?: string,
+}
