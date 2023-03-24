@@ -39,7 +39,7 @@ export const headerData = {
     },
   ],
   actions: [
-    { type: 'button', text: 'FREE SCRIPTING', href: 'https://socialize.video/scheduler/' }
+    { type: 'button', text: 'FREE 1 HOUR CONSULT', href: '/' }
   ],
 };
   
