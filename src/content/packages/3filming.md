@@ -4,6 +4,7 @@ excerpt: Filming local in your area with experienced professionals who can creat
 description1: Are you stressed out thinking about where to start getting your videos made? The idea of hiring a scriptwriter, camera person, video editor, and others seem daunting? You're not alone. 
 description2: More than likely, you have a full plate already. Let us help streamline the process and give you the best chance possible having a great experience and get the videos you need! Our video production packages below allow you to easily purchase the filming you need whether that's at your location or a film studio. We'll assist you through the whole process.
 button: Packages
+image: /assets/images/filming.gif
 video: ../../src/assets/videos/microscope.mov
 vidtype: video/mp4
 benefitTitles: 

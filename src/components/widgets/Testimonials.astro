@@ -1,4 +1,7 @@
 ---
+import { Picture } from '@astrojs/image/components';
+import { findImage } from '~/utils/images';
+
 interface Item {
     photo: string;
     alt: string;
@@ -18,6 +21,7 @@ const {
   highlight,
   items = [],
 } = Astro.props;
+
 ---
 
 <section class="scroll-mt-16 px-20" id="testimonials">
@@ -36,7 +40,19 @@ const {
                     <div class="md:w-1/3">
                         <div class="quote-card flex flex-col p-4 lg:p-12">
                             <div class="icon-div flex justify-start md:w-1/3">
-                                <img src={ photo } alt={ alt } class="block rounded-full my-2 border-indigo-900 border-2 max-h-20"/>
+                                <Picture
+                                    src={photo}
+                                    class="max-w-full lg:max-w-6xl mx-auto mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700"
+                                    widths={[400, 900]}
+                                    sizes="(max-width: 900px) 400px, 900px"
+                                    alt={alt}
+                                    loading="eager"
+                                    aspectRatio={16 / 9}
+                                    width={900}
+                                    height={506}
+                                    loading="eager"
+                                    decoding="async"
+                                />
                             </div>
                             
                             <div class="text-div flex justify-start flex-col">
